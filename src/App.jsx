@@ -12,8 +12,13 @@ function App() {
     });
   }, []);
 
-  function search(q) {
-    console.log({ q });
+  async function search(q) {
+    if (q.length > 3) {
+      const query = await searchMovie(q);
+      setPopularMovies(query.results);
+    } else {
+      return;
+    }
   }
 
   function PopularMovieList() {
@@ -36,7 +41,7 @@ function App() {
   return (
     <div className="page-container">
       <h1 className="page-title">LK21 MOVIE</h1>
-      <input type="text" placeholder="Cari film kesukaanmu..." className="search-movie" onChange={(target) => search(target.value)} />
+      <input type="text" placeholder="Cari film kesukaanmu..." className="search-movie" onChange={({ target }) => search(target.value)} />
       <div className="movie-container">
         <PopularMovieList />
       </div>

@@ -21,7 +21,7 @@
 }
 
 .search-movie {
-  width: 350px;
+  width: 400px;
   padding: 10px 15px;
   border: 2px solid grey;
   border-radius: 8px;
@@ -40,8 +40,8 @@
 
 .movie-wrapper {
   width: 500px;
-  background-color: rgb(19, 23, 76);
-  color: white;
+  background-color: white;
+  color: black;
   margin: 15px;
   border-radius: 10px;
   overflow: hidden;
@@ -73,7 +73,7 @@ img {
 
 .movie-rate {
   font-size: 18px;
-  color: yellow;
+  color: rgb(19, 23, 76);
   text-decoration: underline;
 }
 
